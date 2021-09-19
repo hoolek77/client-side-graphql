@@ -3,5 +3,12 @@
     "id": "jBWMVGjm50l6LGwepDoty",
     "username": "frontendmaster"
   },
-  "pet": []
+  "pet": [
+    {
+      "id": "0",
+      "type": "DOG",
+      "name": "Name",
+      "createAt": "3124124"
+    }
+  ]
 }
