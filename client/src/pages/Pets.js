@@ -48,11 +48,21 @@ export default function Pets() {
       variables: {
         newPet: input,
       },
+      optimisticResponse: {
+        __typename: 'Mutation',
+        addPet: {
+          __typename: 'Pet',
+          id: Math.floor(Math.random() * 10000).toString(),
+          name: input.name,
+          type: input.type,
+          img: 'https://via.placeholder.csom/300',
+        },
+      },
     });
     setModal(false);
   };
 
-  if (loading || newPet.loading) {
+  if (loading) {
     return <Loader />;
   }
 
